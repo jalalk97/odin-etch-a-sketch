@@ -1,6 +1,7 @@
 const gridWidth = 720;
-let sideLength = 100;
+let sideLength = 16;
 
+const sizeChangeButton = document.querySelector(".button");
 const containerDiv = document.querySelector(".container");
 containerDiv.style.width = `${gridWidth}px`;
 
@@ -26,4 +27,16 @@ function createGrid(sideLength) {
   return cells;
 }
 
-createGrid(sideLength);
+sizeChangeButton.addEventListener("click", () => {
+  let newSize;
+  do {
+    newSize = prompt("How many squares per sides?");
+  } while (isNaN(newSize) || newSize > 100 || newSize < 0);
+  createGrid(newSize);
+});
+
+function main() {
+  createGrid(sideLength);
+}
+
+main();

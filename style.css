@@ -42,3 +42,7 @@ h1 {
 .bg-light {
   background-color: var(--color-neutral-100);
 }
+
+.margin-vertical-400 {
+  margin-block: 16px;
+}
