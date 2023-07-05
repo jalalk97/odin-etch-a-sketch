@@ -1,5 +1,5 @@
 const gridWidth = 720;
-let sideLength = 16;
+let initialSize = 16;
 
 const sizeChangeButton = document.querySelector(".button");
 const containerDiv = document.querySelector(".container");
@@ -36,7 +36,7 @@ sizeChangeButton.addEventListener("click", () => {
 });
 
 function main() {
-  createGrid(sideLength);
+  createGrid(initialSize);
 }
 
 main();
