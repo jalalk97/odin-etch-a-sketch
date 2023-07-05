@@ -33,5 +33,12 @@ h1 {
 
 .grid-cell {
   flex: 0 1 auto;
+}
+
+.bg-dark {
+  background-color: var(--color-neutral-900);
+}
+
+.bg-light {
   background-color: var(--color-neutral-100);
 }

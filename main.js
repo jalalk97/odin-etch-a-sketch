@@ -1,5 +1,5 @@
 const gridWidth = 720;
-let sideLength = 16;
+let sideLength = 100;
 
 const containerDiv = document.querySelector(".container");
 containerDiv.style.width = `${gridWidth}px`;
@@ -11,7 +11,15 @@ function createGrid(sideLength) {
     const cellDiv = document.createElement("div");
     cellDiv.classList.add("grid-cell");
     cellDiv.classList.add("square");
+    cellDiv.classList.add("bg-light");
     cellDiv.style.width = `${(gridWidth - 2 * sideLength) / sideLength}px`;
+
+    cellDiv.addEventListener("mouseover", (event) => {
+      console.log(event.target);
+      event.target.classList.replace("bg-light", "bg-dark");
+      console.log(event.target);
+    });
+
     containerDiv.appendChild(cellDiv);
     cells[i] = cellDiv;
   }
